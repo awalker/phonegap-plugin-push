@@ -147,6 +147,8 @@ public class GCMIntentService extends GcmListenerService implements PushConstant
         Log.d(LOG_TAG, "normalize extras");
         Iterator<String> it = extras.keySet().iterator();
         Bundle newExtras = new Bundle();
+        Log.d(LOG_TAG, "setting TITLE");
+        newExtras.putString(TITLE, "Brewniversity");
 
         while (it.hasNext()) {
             String key = it.next();
